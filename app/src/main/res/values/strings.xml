@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">RailEnquiry</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+
+    <string name="trains_between_station">Trains Between Station</string>
+    <string name="train_schedule">Train Schedule</string>
+    <string name="pnr_status">PNR Status</string>
+    <string name="current_availability">Current Availability</string>
+    <string name="seat_availability">Seat Availability</string>
+    <string name="live_train_status">Live Train Status</string>
+    <string name="book_cancel_tickets">Book/Cancel Tickets</string>
+    <string name="live_station_info">Live Station Info</string>
+    <string name="seat_map">Seat Map</string>
+    <string name="fare_enquiry">Fare Enquiry</string>
+    <string name="cancelled_trains">Cancelled Trains</string>
+    <string name="rescheduled_trains">Rescheduled Trains</string>
+    <string name="diverted_trains">Diverted Trains</string>
+
+</resources>
