@@ -75,7 +75,8 @@
                 android:background="#c0c0c0"/>
             <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@color/green">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -87,36 +88,49 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
+                        android:textStyle="bold"
+
+                        android:textColor="#ffffff"
                         android:text="Station"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
                         android:text="Arrival"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
                         android:text="Departure"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
                         android:text="Distance"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
                         android:text="Days"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
                         android:text="Halt"/>
 
 
