@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -27,7 +28,7 @@ import sanjeev.railenquiry.R;
 import sanjeev.railenquiry.Utils.HttpHandler;
 
 public class TrainScheduleActivity extends AppCompatActivity {
-    //swati
+
     EditText edt_train_no;
     Button search;
     String Train_No;
@@ -41,12 +42,13 @@ public class TrainScheduleActivity extends AppCompatActivity {
     Schedule sch;
     LinearLayout lltrain_no;
     CardView card;
+    ProgressBar pro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.train_schedule_recycler);
-
+        pro = (ProgressBar) findViewById(R.id.pro);
         edt_train_no = (EditText) findViewById(R.id.edt_train_no);
         search = (Button) findViewById(R.id.btn_search);
         lltrain_no = (LinearLayout) findViewById(R.id.lltrainno);
@@ -56,6 +58,7 @@ public class TrainScheduleActivity extends AppCompatActivity {
         // train_runson = (TextView) findViewById(R.id.train_runson);
         recyclerView = (RecyclerView) findViewById(R.id.recycler_schedule);
         recyclerView.setHasFixedSize(true);
+        pro.setVisibility(View.GONE);
 //        socre_recycler.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext()) {
             @Override
@@ -86,7 +89,7 @@ public class TrainScheduleActivity extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             // Showing progress dialog
-
+            pro.setVisibility(View.VISIBLE);
 
         }
 
@@ -179,7 +182,7 @@ public class TrainScheduleActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
             // Dismiss the progress dialog
-            // pro.setVisibility(View.GONE);
+            pro.setVisibility(View.GONE);
             /**
              * Updating parsed JSON data into ListView
              * */

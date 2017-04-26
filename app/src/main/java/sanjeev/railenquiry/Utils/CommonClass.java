@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
+import sanjeev.railenquiry.Activity.CancelledTrainActivity;
 import sanjeev.railenquiry.Activity.TrainScheduleActivity;
 import sanjeev.railenquiry.MainActivity;
 
@@ -56,7 +57,9 @@ public class CommonClass {
             case 8:
                 intent = new Intent(activity, NoticeActivity.class);
                 break;*/
-
+            case 9:
+                intent = new Intent(activity, CancelledTrainActivity.class);
+                break;
         }
         if (intent!=null){
             activity.startActivity(intent);
