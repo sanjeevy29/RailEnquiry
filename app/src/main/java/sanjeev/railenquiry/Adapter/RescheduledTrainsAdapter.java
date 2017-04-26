@@ -36,11 +36,12 @@ public class RescheduledTrainsAdapter extends RecyclerView.Adapter<RescheduledTr
 
         viewHolder.train_number.setText(rescheduled.get(i).getTrain_number());
         viewHolder.train_name.setText(rescheduled.get(i).getTrain_name());
-        viewHolder.train_source.setText(rescheduled.get(i).getTrain_source());
+        viewHolder.time_difference.setText(rescheduled.get(i).getTime_diff());
 
-        viewHolder.train_dest.setText(rescheduled.get(i).getTrain_dest());
-
-
+        viewHolder.rescheduled_time.setText(rescheduled.get(i).getRescheduled_time());
+        viewHolder.rescheduled_date.setText(rescheduled.get(i).getRescheduled_date());
+        viewHolder.to_code.setText(rescheduled.get(i).getTo_code());
+        viewHolder.from_code.setText(rescheduled.get(i).getFrom_code());
     }
 
     @Override
@@ -51,9 +52,11 @@ public class RescheduledTrainsAdapter extends RecyclerView.Adapter<RescheduledTr
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView train_number;
         private TextView train_name;
-        private TextView train_source;
-
-        private TextView train_dest;
+        private TextView time_difference;
+        private TextView rescheduled_time;
+        private TextView rescheduled_date;
+        private TextView to_code;
+        private TextView from_code;
 
 
         public ViewHolder(View view) {
@@ -62,9 +65,7 @@ public class RescheduledTrainsAdapter extends RecyclerView.Adapter<RescheduledTr
 
             train_number = (TextView) view.findViewById(R.id.train_number);
             train_name = (TextView) view.findViewById(R.id.train_name);
-            train_source = (TextView) view.findViewById(R.id.train_source);
 
-            train_dest = (TextView) view.findViewById(R.id.train_dest);
 
 
         }

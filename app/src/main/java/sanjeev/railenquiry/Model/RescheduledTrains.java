@@ -8,8 +8,11 @@ public class RescheduledTrains {
 
     private String train_name;
     private String train_number;
-    private String train_source;
-    private String train_dest;
+    private String to_code;
+    private String from_code;
+    private String time_diff;
+    private String rescheduled_date;
+    private String rescheduled_time;
 
     public String getTrain_name() {
         return train_name;
@@ -27,21 +30,43 @@ public class RescheduledTrains {
         this.train_number = train_number;
     }
 
-    public String getTrain_source() {
-        return train_source;
+    public String getTo_code() {
+        return to_code;
     }
 
-    public void setTrain_source(String train_source) {
-        this.train_source = train_source;
+    public void setTo_code(String to_code) {
+        this.to_code = to_code;
     }
 
-    public String getTrain_dest() {
-        return train_dest;
+    public String getFrom_code() {
+        return from_code;
     }
 
-    public void setTrain_dest(String train_dest) {
-        this.train_dest = train_dest;
+    public void setFrom_code(String from_code) {
+        this.from_code = from_code;
     }
 
+    public String getTime_diff() {
+        return time_diff;
+    }
 
+    public void setTime_diff(String time_diff) {
+        this.time_diff = time_diff;
+    }
+
+    public String getRescheduled_date() {
+        return rescheduled_date;
+    }
+
+    public void setRescheduled_date(String rescheduled_date) {
+        this.rescheduled_date = rescheduled_date;
+    }
+
+    public String getRescheduled_time() {
+        return rescheduled_time;
+    }
+
+    public void setRescheduled_time(String rescheduled_time) {
+        this.rescheduled_time = rescheduled_time;
+    }
 }

@@ -38,6 +38,7 @@ public class RescheduledTrainsActivity extends AppCompatActivity {
     List<RescheduledTrains> data;
     String date;
     private String TAG = RescheduledTrainsActivity.class.getSimpleName();
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,27 +83,33 @@ public class RescheduledTrainsActivity extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(jsonStr);
 
-                    JSONArray cancelledArray = jsonObject.getJSONArray("trains");
+                    JSONArray rescheduledArray = jsonObject.getJSONArray("trains");
 
-                    for (int i = 0; i < cancelledArray.length(); i++) {
+                    for (int i = 0; i < rescheduledArray.length(); i++) {
 
                         RescheduledTrains res = new RescheduledTrains();
-                        JSONObject cancelledObject = cancelledArray.getJSONObject(i);
-
-                        JSONObject sourceObject = cancelledObject.getJSONObject("source");
-                        JSONObject destObject = cancelledObject.getJSONObject("dest");
-                        JSONObject trainObject = cancelledObject.getJSONObject("train");
+                        JSONObject rescheduledObject = rescheduledArray.getJSONObject(i);
+                        JSONObject fromObject = rescheduledObject.getJSONObject("from");
+                        JSONObject toObject = rescheduledObject.getJSONObject("to");
 
 
-                        String source_code = sourceObject.getString("code");
-                        String dest_code = destObject.getString("code");
-                        String train_number = trainObject.getString("number");
-                        String train_name = trainObject.getString("name");
+                        String train_number = rescheduledObject.getString("number");
+                        String train_name = rescheduledObject.getString("name");
+                        String rescheduled_date = rescheduledObject.getString("rescheduled_date");
+                        String rescheduled_time = rescheduledObject.getString("rescheduled_time");
+                        String time_diff = rescheduledObject.getString("time_diff");
+
+                        String to_code = toObject.getString("code");
+                        String from_code = fromObject.getString("code");
+
 
                         res.setTrain_name(train_name);
                         res.setTrain_number(train_number);
-                        res.setTrain_source(source_code);
-                        res.setTrain_dest(dest_code);
+                        res.setRescheduled_date(rescheduled_date);
+                        res.setRescheduled_time(rescheduled_time);
+                        res.setTime_diff(time_diff);
+                        res.setTo_code(to_code);
+                        res.setFrom_code(from_code);
 
                         data.add(res);
                     }
