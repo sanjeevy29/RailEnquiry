@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        card_view:cardBackgroundColor="#ffffff"
+        card_view:cardCornerRadius="7dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Station : "
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/station_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="LTT"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text=" - "
+                        android:textStyle="bold"
+                        android:textAppearance="?android:textAppearanceMedium"/>
+                    <TextView
+                        android:id="@+id/station_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="LTT"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:textAppearanceMedium"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Actual Arrival : "
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+                <TextView
+                    android:id="@+id/actual_arrival"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="10.15"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Actual Departure : "
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+                <TextView
+                    android:id="@+id/actual_dept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="10.25"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Scheduled Arrival : "
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+                <TextView
+                    android:id="@+id/sch_arrival"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="10.15"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Scheduled Departure : "
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+                <TextView
+                    android:id="@+id/sch_dept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="10.25"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Status : "
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="5 mins late"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -42,7 +42,7 @@ public class RescheduledTrainsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cancelled_recycler);
+        setContentView(R.layout.rescheduled_recycler);
         date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
         initViews();
         new GetCancelledTrains().execute();
@@ -50,7 +50,7 @@ public class RescheduledTrainsActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        rescheduledRecyclerViews = (RecyclerView) findViewById(R.id.cancelled_recyclerview);
+        rescheduledRecyclerViews = (RecyclerView) findViewById(R.id.rescheduled_recyclerview);
         pro = (ProgressBar) findViewById(R.id.pro);
         rescheduledRecyclerViews.setHasFixedSize(true);
 

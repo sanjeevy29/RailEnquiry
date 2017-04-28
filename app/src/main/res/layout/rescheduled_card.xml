@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        card_view:cardBackgroundColor="#ffffff"
+        card_view:cardCornerRadius="7dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/train_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="12167"
+                android:textAppearance="?android:textAppearanceLarge" />
+
+
+            <TextView
+                android:id="@+id/train_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LTT BSB SUP EXP"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+
+
+                <TextView
+                    android:id="@+id/rescheduled_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rescheduled time"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+
+                <TextView
+                    android:id="@+id/rescheduled_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rescheduled Date"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/time_difference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time Difference"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

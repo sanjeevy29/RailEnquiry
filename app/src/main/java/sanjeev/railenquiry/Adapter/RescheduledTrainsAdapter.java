@@ -26,7 +26,7 @@ public class RescheduledTrainsAdapter extends RecyclerView.Adapter<RescheduledTr
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cancelled_card, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.rescheduled_card, viewGroup, false);
         return new ViewHolder(view);
     }
 
@@ -40,8 +40,8 @@ public class RescheduledTrainsAdapter extends RecyclerView.Adapter<RescheduledTr
 
         viewHolder.rescheduled_time.setText(rescheduled.get(i).getRescheduled_time());
         viewHolder.rescheduled_date.setText(rescheduled.get(i).getRescheduled_date());
-        viewHolder.to_code.setText(rescheduled.get(i).getTo_code());
-        viewHolder.from_code.setText(rescheduled.get(i).getFrom_code());
+       /* viewHolder.to_code.setText(rescheduled.get(i).getTo_code());
+        viewHolder.from_code.setText(rescheduled.get(i).getFrom_code());*/
     }
 
     @Override
@@ -65,7 +65,9 @@ public class RescheduledTrainsAdapter extends RecyclerView.Adapter<RescheduledTr
 
             train_number = (TextView) view.findViewById(R.id.train_number);
             train_name = (TextView) view.findViewById(R.id.train_name);
-
+            time_difference = (TextView) view.findViewById(R.id.time_difference);
+            rescheduled_time = (TextView) view.findViewById(R.id.rescheduled_time);
+            rescheduled_date = (TextView) view.findViewById(R.id.rescheduled_date);
 
 
         }
