@@ -82,6 +82,7 @@ public class LiveTrainActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
             HttpHandler sh = new HttpHandler();
+
             String url = "http://api.railwayapi.com/live/train/"+trainno+"/doj/20170428/apikey/nn4ypiuv/";
             String jsonStr = sh.makeServiceCall(url);
             data = new ArrayList<>();

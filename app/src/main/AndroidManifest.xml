@@ -26,6 +26,9 @@
         <activity android:name=".Activity.RescheduledTrainsActivity"/>
         <activity android:name=".Activity.LiveTrainMainActivity"/>
         <activity android:name=".Activity.LiveTrainActivity"/>
+        <activity android:name=".Activity.FareMainActivity"/>
+        <activity android:name=".Activity.PNRMainActivity"/>
+        <activity android:name=".Activity.PNRActivity"/>
     </application>
 
 </manifest>

@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 
 import sanjeev.railenquiry.Activity.CancelledTrainActivity;
+import sanjeev.railenquiry.Activity.FareMainActivity;
 import sanjeev.railenquiry.Activity.LiveTrainMainActivity;
+import sanjeev.railenquiry.Activity.PNRMainActivity;
 import sanjeev.railenquiry.Activity.RescheduledTrainsActivity;
 import sanjeev.railenquiry.Activity.TrainScheduleActivity;
 import sanjeev.railenquiry.MainActivity;
@@ -38,10 +40,10 @@ public class CommonClass {
             case 1:
                 intent = new Intent(activity, TrainScheduleActivity.class);
                 break;
-      /*      case 2:
-                intent = new Intent(activity, ExamActivity.class);
+        case 2:
+                intent = new Intent(activity, PNRMainActivity.class);
                 break;
-            case 3:
+        /*    case 3:
                 intent = new Intent(activity, ResultActivity.class);
                 break;
             case 4:
@@ -55,10 +57,10 @@ public class CommonClass {
                 break;
             case 7:
                 intent = new Intent(activity, NewsActivity.class);
-                break;
-            case 8:
-                intent = new Intent(activity, NoticeActivity.class);
                 break;*/
+            case 8:
+                intent = new Intent(activity, FareMainActivity.class);
+                break;
             case 9:
                 intent = new Intent(activity, CancelledTrainActivity.class);
                 break;
