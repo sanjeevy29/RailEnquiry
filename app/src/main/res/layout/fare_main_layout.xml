@@ -15,44 +15,35 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_layout_train_no"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/edt_train_no"
+
+            <AutoCompleteTextView
+                android:id="@+id/act_train_no"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Train Number"
                 android:singleLine="true" />
-        </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_source"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
-                <EditText
-                    android:id="@+id/edt_source"
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/atc_source"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Source"
                     android:singleLine="true" />
-            </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_dest"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
-                <EditText
-                    android:id="@+id/edt_dest"
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/act_dest"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Destination"
                     android:singleLine="true" />
-            </android.support.design.widget.TextInputLayout>
+
 
             <Spinner
                 android:id="@+id/spnr_date"

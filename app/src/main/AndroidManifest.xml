@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="sanjeev.railenquiry">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
     <application
+        android:name=".Activity.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,14 +24,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.TrainScheduleActivity"/>
-        <activity android:name=".Activity.CancelledTrainActivity"/>
-        <activity android:name=".Activity.RescheduledTrainsActivity"/>
-        <activity android:name=".Activity.LiveTrainMainActivity"/>
-        <activity android:name=".Activity.LiveTrainActivity"/>
-        <activity android:name=".Activity.FareMainActivity"/>
-        <activity android:name=".Activity.PNRMainActivity"/>
-        <activity android:name=".Activity.PNRActivity"/>
+        <activity android:name=".Activity.TrainScheduleActivity" />
+        <activity android:name=".Activity.CancelledTrainActivity" />
+        <activity android:name=".Activity.RescheduledTrainsActivity" />
+        <activity android:name=".Activity.LiveTrainMainActivity" />
+        <activity android:name=".Activity.LiveTrainActivity" />
+        <activity android:name=".Activity.FareMainActivity" />
+        <activity android:name=".Activity.PNRMainActivity" />
+        <activity android:name=".Activity.PNRActivity" />
+        <activity android:name=".Activity.FareActivity" />
+        <activity android:name=".Activity.StationAutocompleteActivity" />
+
+
     </application>
 
 </manifest>
