@@ -22,9 +22,6 @@
                 android:hint="Source"
                 android:singleLine="true" />
 
-
-
-
             <Spinner
                 android:id="@+id/spnr_time"
                 android:layout_width="match_parent"
