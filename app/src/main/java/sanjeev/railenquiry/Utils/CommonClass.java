@@ -10,6 +10,7 @@ import sanjeev.railenquiry.Activity.LiveTrainMainActivity;
 import sanjeev.railenquiry.Activity.PNRMainActivity;
 import sanjeev.railenquiry.Activity.RescheduledTrainsActivity;
 import sanjeev.railenquiry.Activity.SeatAvailabilityMainActivity;
+import sanjeev.railenquiry.Activity.StationStatusMainActivity;
 import sanjeev.railenquiry.Activity.TrainScheduleActivity;
 import sanjeev.railenquiry.MainActivity;
 
@@ -18,30 +19,30 @@ public class CommonClass {
     Activity activity;
     public SharedPreferences settings;
 
-    public CommonClass(Activity activity){
+    public CommonClass(Activity activity) {
         this.activity = activity;
-      //  settings = activity.getSharedPreferences(ConstValue.PREF_NAME, 0);
+        //  settings = activity.getSharedPreferences(ConstValue.PREF_NAME, 0);
     }
 
 
-    public void setSession(String key, String value){
-        settings.edit().putString(key,value).commit();
-    }
-    public String getSession(String key){
-        return settings.getString(key,"");
+    public void setSession(String key, String value) {
+        settings.edit().putString(key, value).commit();
     }
 
-    public  void open_screen(int position){
+    public String getSession(String key) {
+        return settings.getString(key, "");
+    }
+
+    public void open_screen(int position) {
         Intent intent = null;
-        switch (position)
-        {
+        switch (position) {
           /* case 0:
                 intent = new Intent(activity, ProfileActivity.class);
                 break;*/
             case 1:
                 intent = new Intent(activity, TrainScheduleActivity.class);
                 break;
-        case 2:
+            case 2:
                 intent = new Intent(activity, PNRMainActivity.class);
                 break;
         /*    case 3:
@@ -53,10 +54,10 @@ public class CommonClass {
         /*    case 5:
                 intent = new Intent(activity, MainActivity.class);
                 break;*/
-        /*    case 6:
-                intent = new Intent(activity, HolidaysActivity.class);
+            case 6:
+                intent = new Intent(activity, StationStatusMainActivity.class);
                 break;
-            case 7:
+          /*  case 7:
                 intent = new Intent(activity, NewsActivity.class);
                 break;*/
             case 8:
@@ -73,7 +74,7 @@ public class CommonClass {
                 intent = new Intent(activity, LiveTrainMainActivity.class);
                 break;
         }
-        if (intent!=null){
+        if (intent != null) {
             activity.startActivity(intent);
         }
     }

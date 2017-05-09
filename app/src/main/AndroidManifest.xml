@@ -36,6 +36,7 @@
         <activity android:name=".Activity.StationAutocompleteActivity" />
         <activity android:name=".Activity.SeatAvailabilityMainActivity"/>
         <activity android:name=".Activity.SeatAvailabilityActivity"/>
+        <activity android:name=".Activity.StationStatusMainActivity"/>
 
 
     </application>
