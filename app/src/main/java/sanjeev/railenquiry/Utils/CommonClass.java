@@ -9,6 +9,7 @@ import sanjeev.railenquiry.Activity.FareMainActivity;
 import sanjeev.railenquiry.Activity.LiveTrainMainActivity;
 import sanjeev.railenquiry.Activity.PNRMainActivity;
 import sanjeev.railenquiry.Activity.RescheduledTrainsActivity;
+import sanjeev.railenquiry.Activity.SeatAvailabilityMainActivity;
 import sanjeev.railenquiry.Activity.TrainScheduleActivity;
 import sanjeev.railenquiry.MainActivity;
 
@@ -45,10 +46,10 @@ public class CommonClass {
                 break;
         /*    case 3:
                 intent = new Intent(activity, ResultActivity.class);
-                break;
-            case 4:
-                intent = new Intent(activity, TeacherActivity.class);
                 break;*/
+            case 4:
+                intent = new Intent(activity, SeatAvailabilityMainActivity.class);
+                break;
         /*    case 5:
                 intent = new Intent(activity, MainActivity.class);
                 break;*/

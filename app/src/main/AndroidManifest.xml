@@ -34,6 +34,8 @@
         <activity android:name=".Activity.PNRActivity" />
         <activity android:name=".Activity.FareActivity" />
         <activity android:name=".Activity.StationAutocompleteActivity" />
+        <activity android:name=".Activity.SeatAvailabilityMainActivity"/>
+        <activity android:name=".Activity.SeatAvailabilityActivity"/>
 
 
     </application>
