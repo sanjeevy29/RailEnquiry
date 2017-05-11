@@ -23,22 +23,21 @@ import sanjeev.railenquiry.R;
  * Created by sanjeev.yadav on 4/28/2017.
  */
 
-public class StationStatusMainActivity extends AppCompatActivity implements
+public class TrainBetweenStationMainActivity extends AppCompatActivity implements
         AdapterView.OnItemSelectedListener {
 
-    private AutoCompleteTextView edt_source;
-    private Spinner spnr_time;
+    private AutoCompleteTextView edt_train_number, edt_source, edt_destination;
+    private Spinner spnr_date, spnr_quota, spnr_class;
     private Button btn_submit;
 
-    String t_source;
+    String t_source, t_dest;
+    String[] date = {"10-05", "11-05", "12-05", "13-05", "14-05", "15-05"};
 
-    String[] time = {"Within 2 Hours", "Within 3 Hours", "Within 4 Hours","Within 5 Hours","Within 6 Hours",
-            "Within 7 Hours","Within 8 Hours"};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.station_status_main_layout);
+        setContentView(R.layout.train_between_station_main_layout);
 
         initView();
         StationAutocompleteActivity s = new StationAutocompleteActivity();
@@ -58,45 +57,64 @@ public class StationStatusMainActivity extends AppCompatActivity implements
                     ArrayList<Object> objectArrayList = new ArrayList<Object>();
                     objectArrayList.add(edt_source.getText().toString());
                     objectArrayList.add(edt_source);
-                    objectArrayList.add(StationStatusMainActivity.this);
+                    objectArrayList.add(TrainBetweenStationMainActivity.this);
                     new StationAutocompleteActivity.HttpGetTask().execute(objectArrayList);
                 }
             }
         });
 
+        edt_destination.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (s.length() == 2) {
+                    ArrayList<Object> objectArrayList = new ArrayList<Object>();
+                    objectArrayList.add(edt_destination.getText().toString());
+                    objectArrayList.add(edt_destination);
+                    objectArrayList.add(TrainBetweenStationMainActivity.this);
+                    new StationAutocompleteActivity.HttpGetTask().execute(objectArrayList);
+                }
+            }
+        });
     }
 
     private void initView() {
 
-
+        edt_train_number = (AutoCompleteTextView) findViewById(R.id.act_train_no);
         edt_source = (AutoCompleteTextView) findViewById(R.id.atc_source);
-
+        edt_destination = (AutoCompleteTextView) findViewById(R.id.act_dest);
         btn_submit = (Button) findViewById(R.id.btn_submit);
 
-        spnr_time = (Spinner) findViewById(R.id.spnr_time);
+        spnr_date = (Spinner) findViewById(R.id.spnr_date);
 
 
-        spnr_time.setOnItemSelectedListener(this);
+        ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item, date);
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+        spnr_date.setAdapter(aa);
 
-
-        ArrayAdapter time_adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, time);
-
-        time_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        spnr_time.setAdapter(time_adapter);
 
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //      train_no = edt_train_number.getText().toString();
 
                 t_source = edt_source.getText().toString();
+                t_dest = edt_destination.getText().toString();
 
 
-
-                Intent in = new Intent(getApplicationContext(), StationStatusActivity.class);
+                Intent in = new Intent(getApplicationContext(), TrainBetweenStationActivity.class);
 
                 in.putExtra("t_source", t_source);
+                in.putExtra("t_dest", t_dest);
 
                 startActivity(in);
             }

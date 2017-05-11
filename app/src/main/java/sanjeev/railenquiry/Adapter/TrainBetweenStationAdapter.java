@@ -8,22 +8,23 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.List;
-import sanjeev.railenquiry.Model.StationStatus;
+import sanjeev.railenquiry.Model.Fare;
+import sanjeev.railenquiry.Model.TrainBetweenStation;
 import sanjeev.railenquiry.R;
 
 
-public class StationStatusAdapter extends RecyclerView.Adapter<StationStatusAdapter.ViewHolder> {
-    private List<StationStatus> station;
+public class TrainBetweenStationAdapter extends RecyclerView.Adapter<TrainBetweenStationAdapter.ViewHolder> {
+    private List<TrainBetweenStation> tbs;
     private Context context;
 
-    public StationStatusAdapter(Context context, List<StationStatus> station) {
-        this.station = station;
+    public TrainBetweenStationAdapter(Context context, List<TrainBetweenStation> tbs) {
+        this.tbs = tbs;
         this.context = context;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.station_status_card, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.train_between_station_card, viewGroup, false);
         return new ViewHolder(view);
     }
 
@@ -31,29 +32,29 @@ public class StationStatusAdapter extends RecyclerView.Adapter<StationStatusAdap
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
 
 
-        viewHolder.train_name.setText(station.get(i).getTrain_name());
-        viewHolder.train_no.setText(station.get(i).getTrain_no());
-        viewHolder.train_sch_dep.setText(station.get(i).getDep());
+        viewHolder.train_number.setText(tbs.get(i).getTrain_no());
+        viewHolder.train_name.setText(tbs.get(i).getTrain_name());
+        viewHolder.train_sch_dep.setText(tbs.get(i).getDeparture());
 
 
     }
 
     @Override
     public int getItemCount() {
-        return station.size();
+        return tbs.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        private TextView train_number;
         private TextView train_name;
-        private TextView train_no;
         private TextView train_sch_dep;
 
 
         public ViewHolder(View view) {
             super(view);
 
-            train_name = (TextView) view.findViewById(R.id.train_number);
-            train_no = (TextView) view.findViewById(R.id.train_name);
+            train_number = (TextView) view.findViewById(R.id.train_number);
+            train_name = (TextView) view.findViewById(R.id.train_name);
             train_sch_dep = (TextView) view.findViewById(R.id.train_sch_dep);
 
 

@@ -37,6 +37,9 @@
         <activity android:name=".Activity.SeatAvailabilityMainActivity"/>
         <activity android:name=".Activity.SeatAvailabilityActivity"/>
         <activity android:name=".Activity.StationStatusMainActivity"/>
+        <activity android:name=".Activity.StationStatusActivity"/>
+        <activity android:name=".Activity.TrainBetweenStationMainActivity"/>
+        <activity android:name=".Activity.TrainBetweenStationActivity"/>
 
 
     </application>

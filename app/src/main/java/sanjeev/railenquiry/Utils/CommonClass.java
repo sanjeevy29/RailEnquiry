@@ -11,6 +11,7 @@ import sanjeev.railenquiry.Activity.PNRMainActivity;
 import sanjeev.railenquiry.Activity.RescheduledTrainsActivity;
 import sanjeev.railenquiry.Activity.SeatAvailabilityMainActivity;
 import sanjeev.railenquiry.Activity.StationStatusMainActivity;
+import sanjeev.railenquiry.Activity.TrainBetweenStationMainActivity;
 import sanjeev.railenquiry.Activity.TrainScheduleActivity;
 import sanjeev.railenquiry.MainActivity;
 
@@ -36,9 +37,9 @@ public class CommonClass {
     public void open_screen(int position) {
         Intent intent = null;
         switch (position) {
-          /* case 0:
-                intent = new Intent(activity, ProfileActivity.class);
-                break;*/
+          case 0:
+                intent = new Intent(activity, TrainBetweenStationMainActivity.class);
+                break;
             case 1:
                 intent = new Intent(activity, TrainScheduleActivity.class);
                 break;
