@@ -4,9 +4,12 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -23,9 +26,12 @@ import sanjeev.railenquiry.Model.LiveTrain;
 import sanjeev.railenquiry.R;
 import sanjeev.railenquiry.Utils.HttpHandler;
 
+import static sanjeev.railenquiry.R.id.pro;
+
 /**
  * Created by sanjeev.yadav on 4/28/2017.
  */
+
 
 public class FareActivity extends AppCompatActivity {
 
@@ -41,6 +47,8 @@ public class FareActivity extends AppCompatActivity {
     private String TAG = FareActivity.class.getSimpleName();
     TextView train_fare_name, train_no, train_name, train_from, train_to, quota_code, quota_name;
     RecyclerView recyclerView;
+    ProgressBar progressBar;
+    CardView cardViewFare,cardViewSchedule;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,9 +69,13 @@ public class FareActivity extends AppCompatActivity {
         quota_name = (TextView) findViewById(R.id.quota_name);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyler_faredetails);
+        progressBar= (ProgressBar) findViewById(R.id.pro);
+        cardViewFare=(CardView)findViewById(R.id.card_view_fare);
+        cardViewSchedule=(CardView)findViewById(R.id.card_view_schedule);
 
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext()) {
+
             @Override
             public RecyclerView.LayoutParams generateDefaultLayoutParams() {
                 return null;
@@ -79,7 +91,10 @@ public class FareActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            //   pro.setVisibility(View.VISIBLE);
+            cardViewFare.setVisibility(View.GONE);
+                    cardViewSchedule.setVisibility(View.GONE);
+            progressBar.setVisibility(View.VISIBLE);
+
         }
 
         @Override
@@ -154,7 +169,9 @@ public class FareActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-            //   pro.setVisibility(View.GONE);
+              progressBar.setVisibility(View.GONE);
+            cardViewFare.setVisibility(View.VISIBLE);
+            cardViewSchedule.setVisibility(View.VISIBLE);
 
 
             train_from.setText(fare.getFrom());
